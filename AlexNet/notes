@@ -6,4 +6,6 @@ ReLu trains much faster than tanh an in the paper experimental proof is shown wh
 
 This architecture also solved the major problem of over-fitting by using Dropout layer after every fully connected layer
 
+Formula for calculating output size: 0 = ((W - k + 2p)/ s ) + 1 , where W is input height; k is kernel size; p is padding; s is stride
+
 
