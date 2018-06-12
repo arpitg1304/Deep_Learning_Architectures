@@ -1,0 +1,9 @@
+AlexNet has 8 layers: 5 are conv and 3 are fully connected
+
+In between some layers are max pooling and activations(ReLU)
+
+ReLu trains much faster than tanh an in the paper experimental proof is shown which proved ReLu to be approx 6 times faster than the tanh non-linear activation
+
+This architecture also solved the major problem of over-fitting by using Dropout layer after every fully connected layer
+
+
