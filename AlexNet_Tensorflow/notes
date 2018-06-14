@@ -1,0 +1,30 @@
+Reading list on AlexNet:
+
+Original paper: https://www.nvidia.cn/content/tesla/pdf/machine-learning/imagenet-classification-with-deep-convolutional-nn.pdf
+https://www.learnopencv.com/understanding-alexnet/ #Very good image of the architeture
+https://medium.com/@smallfishbigsea/a-walk-through-of-alexnet-6cbd137a5637
+https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html
+https://www.analyticsvidhya.com/blog/2017/08/10-advanced-deep-learning-architectures-data-scientists/
+http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/
+
+
+
+Highlights of AlexNet:
+
+Use of ReLU instead of tanh, ReLU outperformed tanh by converging 6 times faster. ReLU is a very fancy name for max(0,x) (yeah thats it!); be reason for ReLU being faster is that the gradient descent optimizes better because of the gradient being away from zero for +ve values. Whereas the tanh function saturates at very high or very low values of z
+
+Use of dropout in dense layers
+
+Use of normaliztion
+
+Use of overlapping MaxPooling: 3rd, 4th, 5th conv layers are connected directly without any maxpooling
+1st , 2nd and 5th conv layers are followed by a Max Pooling(3x3 with stride of 2)
+
+Origianally the authors used normalization but later on researchers did not find it much useful so it was ignored
+
+
+Role of MaxPooling: Downsampling of the image size(keeping the # channels same). In the paper overlapping max pooling is used(pool size 3, stride size 2,  hence overlap of 1), this technique helped reducing the top-5 error rate by 0.3% (seems small, taken months to research)
+
+Use of data augmentation to prevent overfitting
+
+Use of dropout for reducing overfitting: This makes the neurons learn independently and breaks the interdependence of the neighborhood neurons. Talking in a different manner, dropout creates an ensemble of many neural networks that converges slower but reduces overfitting substantially.
